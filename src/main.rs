@@ -26,6 +26,9 @@ fn main() {
                 .with_data(&fake_data)
                 .create(&*ds_name)
                 .unwrap();
+
+            /*heaptrack will show that the call to create will cause the majority
+            of memory leaks, when it creates the plist for access properties*/
         }
     }
     //Close the HDF file
